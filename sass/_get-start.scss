@@ -1,14 +1,82 @@
 .get-start{
     background-image: url('../images/bg.jpg');
     background-repeat: no-repeat;
-    background-position-x: center;
-    background-size: 100% 100%;
+    background-position:top center;
     display: block;
-    padding: 0;
+    padding-top: 300px;
+    padding-bottom: 140px;
     max-width: 1920px;
-    height: 700px;
     margin: 0 auto;
+    position: relative;
+    bottom: 25px;
+    
 }
 
+.get-start-info{
+    margin-bottom: 130px;
+    p{
+        color: $global-color;
+        font-size: $normal-size;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    h1{
+        font-size: $big-heading-size;
+        line-height: $big-heading-lh;
+        width: 543px;
+        text-transform: uppercase;
+        color: $global-color;
+        opacity: 0.9;
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    a{
+        background-color: $active-color;
+        padding: 20px 90px;
+        font-size: $normal-size;
+        text-transform: uppercase;
+        color: $light-color;
+        border-radius: 10px;
+        opacity: 0.95;
+        transition: background-color 0.3s ease, color 0.2s ease;
+        border: 3px solid $active-color;
+        font-weight: 500;
+    }
+
+    a:hover{
+        background-color: transparent;
+        color: $active-color;
+    }
+}
+
+
+.btn-box{
+    display: flex;
+    align-items: center;
+
+    button{
+        height: 70px;
+        border: none;
+        outline: none;
+        background-color: $gold-color;
+        padding: 0 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 4px solid $gold-color;
+        transition: background-color 0.3s ease;
+    }
+
+    button:first-child{
+        padding: 0 15px;
+        margin-right: 10px;
+    }
+
+    button:hover{
+        background-color: transparent;
+    }
+}
 
 
