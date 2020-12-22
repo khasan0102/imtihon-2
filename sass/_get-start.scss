@@ -78,5 +78,37 @@
         background-color: transparent;
     }
 }
+@media only screen and (max-width: 1000px){
+    .get-start{
+        padding-top: 200px;
+        padding-bottom: 90px;
+    }
+    .get-start-info{
+        margin-bottom: 100px;
+    }
+}
 
+@media only screen and (max-width: 860px){
+    .get-start-info{
+        h1{
+            font-size: $heading-size;
+            line-height: $heading-lh;
+            width: 50%;
+        }
 
+        a{
+            padding: 14px 70px;
+        }
+    }
+
+    .btn-box{
+        button{
+            height: 50px;
+            padding: 0 15px;
+        }
+
+        button:first-child{
+            padding: 0 10px;
+        }
+    }
+}

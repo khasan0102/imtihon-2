@@ -1,117 +1,156 @@
-.site-header{
-    width: 100vw;
-    background-color: white;
-    padding-top: 20px;
+.site-header {
+  background-color: white;
+  padding-top: 20px;
 }
 //start header-icons section
 
-.header-icons{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    position: relative;
-    a{
-        border-radius: 5px;
-        transition: box-shadow 0.3s ease;
-    }
-    a:hover{
-        box-shadow: 0 0 8px 1px rgba($color: #706f6f, $alpha: .3);
-    }
+.header-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  a {
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+  }
+  a:hover {
+    box-shadow: 0 0 8px 1px rgba($color: #706f6f, $alpha: 0.3);
+  }
 }
 
-.call-box{
-    display: flex;
-    align-items: center;
-    color: $global-color;
+.call-box {
+  display: flex;
+  align-items: center;
+  color: $global-color;
 
-    img{
-       padding-left: 7px;
-    }
+  img {
+    padding-left: 7px;
+  }
 }
 
-.icon-info{
-    padding: 7px;
-    h4,span{
-        margin: 0;
-        font-size: $small-size;
-    }
-
-    span{
-        opacity: 0.8;
-    }
-}
-
-.name-box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: $active-color;
-    padding: 3px;
-
-    span{
-        margin: 0;
-        display: inline-block;
-        font-size: $small-size;
-    }
-}
-
-.name-img{
-    display: flex;
-    align-items: center;
+.icon-info {
+  padding: 7px;
+  h4,
+  span {
     margin: 0;
+    font-size: $small-size;
+  }
+
+  span {
+    opacity: 0.8;
+  }
 }
 
-.clock-box{
-    display: flex;
-    align-items: center;
-    color: $global-color;
+.name-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $active-color;
+  padding: 3px;
 
-    img{
-       padding-left: 7px;
-    }
+  span {
+    margin: 0;
+    display: inline-block;
+    font-size: $small-size;
+  }
+}
+
+.name-img {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.clock-box {
+  display: flex;
+  align-items: center;
+  color: $global-color;
+
+  img {
+    padding-left: 7px;
+  }
 } //end header-icons section
 
+// start header-nav-section
 
-// start header-nav-section 
+.header-nav-section {
+  .logo {
+    display: none;
+  }
 
-.header-nav-section{
-    width: 100%;
-    background-color: $active-color;
-    border-radius: 5px;
+  width: 100%;
+  background-color: $active-color;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  position: sticky;
+  top: 10px;
+  z-index: 10;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px 25px;
-    position: sticky;
-    top: 10px;
-    z-index: 10;
+  }
+}
 
-    ul{
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        align-items: center;
+.nav-list > a {
+  color: $light-color;
+  text-transform: capitalize;
+  margin-right: 22px;
+  font-size: $normal-size;
+  padding: 7px;
+  border-bottom: 2px solid transparent;
+  transition: border 0.3s ease;
+  opacity: 0.9;
+}
+
+.nav-list > a:hover {
+  border-color: $light-color;
+  opacity: 1;
+}
+
+.header-icon-list > a {
+  margin-right: 12px;
+}
+
+@media only screen and (max-width: 1150px) {
+  .site-header {
+    padding: 0;
+  }
+  .header-icons {
+    display: none;
+  }
+  .header-nav-section {
+    .logo {
+      display: block;
+      color: $light-color;
+      font-size: $normal-size;
+      line-height: $normal-lh;
+
+      span {
+        color: $gold-color;
+      }
     }
+  }
 }
 
-.nav-list > a{
-    color: $light-color;
-    text-transform: capitalize;
-    margin-right: 22px;
-    font-size: $normal-size;
-    padding: 7px;
-    border-bottom: 2px solid transparent;
-    transition: border 0.3s ease;
-    opacity: 0.9;
-}
+@media only screen and (max-width: 950px) {
+  .header-nav-section {
+    .logo {
+      font-size: $normal-size2;
+      line-height: $normal-lh2;
+    }
+  }
 
-.nav-list > a:hover{
-    border-color: $light-color;
-    opacity: 1;
-}
-
-.header-icon-list > a{
-    margin-right: 12px;
+  .nav-list > a {
+    font-size: $small-size2;
+    padding: 4px;
+    margin-right: 15px;
+  }
 }
