@@ -90,6 +90,11 @@ a {
   .icon-info span {
     opacity: 0.8; }
 
+.icon-item {
+  height: 0; }
+  .icon-item .icon-item-list img {
+    height: 0; }
+
 .name-box {
   display: flex;
   flex-direction: column;
@@ -217,7 +222,8 @@ a {
     height: 3px;
     background-color: #ffffff;
     border-radius: 1px;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    transition: transform 0.3s ease, background-color 0.2s; }
   .nav-item,
   .header-icon-item {
     position: absolute;
@@ -233,6 +239,7 @@ a {
     width: 100%;
     z-index: 10; }
   .nav-list > a {
+    margin: 0;
     font-size: 0;
     color: transparent;
     width: 100%;
@@ -241,7 +248,7 @@ a {
   .click-list {
     z-index: 30;
     top: 100%; }
-  .click-list > .nav-list a {
+  .click-list .nav-list > a {
     padding: 23px 0;
     color: #ffd600;
     border: 1px solid #ffd600;
@@ -252,36 +259,37 @@ a {
     text-align: center;
     opacity: 1;
     margin: 0; }
-  .click-list > .nav-list a:hover {
+  .click-list a:hover {
     border: none; }
-  .header-icon-item {
-    transition: all 0.7s ease; }
-    .header-icon-item .header-icon-list a .vk {
-      height: 0;
-      width: 0; }
-    .header-icon-item .header-icon-list a .ins {
-      height: 0;
-      width: 0; }
-    .header-icon-item .header-icon-list a .twt {
-      height: 0;
-      width: 0; }
-  .icon-click {
-    background-color: #0055b8;
-    left: 0;
-    border: 1px solid gold;
+  #icons {
+    display: none; }
+  .icon-item {
     width: 100%;
-    top: 402px; }
-    .icon-click .header-icon-list {
+    background-color: #0055b8;
+    display: flex;
+    justify-content: center;
+    height: 0;
+    transition: height 0.3s ease; }
+    .icon-item .icon-item-list {
+      margin: 0 5px;
+      padding: 0;
+      transition: padding 0.3s ease; }
+      .icon-item .icon-item-list img {
+        height: 0; }
+  .icon-click {
+    height: auto; }
+    .icon-click .icon-item-list {
       padding: 20px 0; }
-      .icon-click .header-icon-list a .vk {
-        height: 26px;
-        width: 26px; }
-      .icon-click .header-icon-list a .ins {
-        height: 18px;
-        width: 18px; }
-      .icon-click .header-icon-list a .twt {
-        width: 20px;
-        height: 20px; } }
+      .icon-click .icon-item-list img {
+        height: auto; }
+  .first-line {
+    transform: rotate(45deg);
+    position: absolute; }
+  .second-line {
+    background-color: transparent; }
+  .threed-line {
+    transform: rotate(-45deg);
+    position: absolute; } }
 
 .get-start {
   background-image: url("../images/bg.jpg");
@@ -365,6 +373,29 @@ a {
     padding: 0 15px; }
   .btn-box button:first-child {
     padding: 0 10px; } }
+
+@media only screen and (max-width: 600px) {
+  .get-start {
+    width: 100%;
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 100px; }
+  .get-start-info {
+    margin-bottom: 50px; }
+    .get-start-info p {
+      font-size: 15px;
+      margin: 0; }
+    .get-start-info h1 {
+      font-size: 25px;
+      line-height: 28px;
+      margin-top: 8px; } }
+
+@media only screen and (max-width: 450px) {
+  .get-start {
+    width: 100%;
+    background-image: url("../images/bg2.jpg");
+    background-size: 100%;
+    background-position: top; } }
 
 .boxes-box {
   display: flex;
@@ -533,7 +564,7 @@ a {
   .check label {
     font-size: 13px;
     line-height: 16px;
-    width: 205px; }
+    width: 80; }
   .form-box > input {
     font-size: 13px; }
   .input-box span {
@@ -547,3 +578,33 @@ a {
     font-size: 11px;
     line-height: 16px;
     width: 85%; } }
+
+@media only screen and (max-width: 600px) {
+  .boxes-box {
+    width: 100%; }
+    .boxes-box .gold-box_2 {
+      width: 0%;
+      display: none; }
+  .gold-box {
+    width: 40%; }
+  .form-box {
+    width: 60%; } }
+
+@media only screen and (max-width: 450px) {
+  .boxes-box {
+    max-width: 450px; }
+  .gold-box {
+    width: 0px;
+    display: none; }
+  .form-box {
+    transform: translateY(0);
+    max-width: 450px;
+    width: 100vw;
+    padding: 20px 30px; }
+    .form-box button {
+      width: 100%; }
+    .form-box input {
+      width: 100%; }
+  .check label {
+    width: 80%;
+    font-size: 12px; } }

@@ -42,6 +42,16 @@
   }
 }
 
+.icon-item{
+  height: 0;
+
+  .icon-item-list{
+    img{
+      height: 0;
+    }
+  }
+}
+
 .name-box {
   display: flex;
   flex-direction: column;
@@ -222,6 +232,7 @@
     background-color: $light-color;
     border-radius: 1px;
     margin-bottom: 5px;
+    transition: transform 0.3s ease, background-color 0.2s;
   }
 
   .nav-item,
@@ -243,6 +254,7 @@
     z-index: 10;
   }
   .nav-list > a {
+    margin: 0;
     font-size: 0;
     color: transparent;
     width: 100%;
@@ -253,8 +265,8 @@
     z-index: 30;
     top: 100%;
   }
-  .click-list > .nav-list {
-    a {
+  .click-list  {
+    .nav-list >  a {
       padding: 23px 0;
       color: $gold-color;
       border: 1px solid #ffd600;
@@ -272,54 +284,56 @@
     }
   }
 
-  .header-icon-item{
-    transition: all 0.7s ease;
+  #icons{
+    display: none;
+  }
 
-    .header-icon-list{
-      a{
-        .vk{
-          height: 0;
-          width: 0;
-        }
+  .icon-item{
+    width: 100%;
+    background-color: $active-color;
+    display: flex;
+    justify-content: center;
+    height: 0;
+    transition: height 0.3s ease;
 
-        .ins{
-          height: 0;
-          width: 0;
-        }
+    .icon-item-list{
+      margin: 0 5px;
+      padding: 0;
+      transition: padding 0.3s ease;
 
-        .twt{
-          height: 0;
-          width: 0;
-        }
+      img{
+        height: 0;
       }
     }
-  }
-  .icon-click {
-    background-color: $active-color;
-    left: 0;
-    border: 1px solid gold;
-    width: 100%;
-    top: 402px;
 
-    .header-icon-list {
+  }
+
+  .icon-click{
+    height: auto;
+
+    .icon-item-list{
       padding: 20px 0;
 
-     a{
-      .vk {
-        height: 26px;
-        width: 26px;
+      img{
+        height: auto;
       }
-
-      .ins {
-        height: 18px;
-        width: 18px;
-      }
-
-      .twt{
-        width: 20px;
-        height: 20px;
-      }
-     }
     }
   }
+
+
+  .first-line{
+    transform: rotate(45deg);
+    position: absolute;
+  }
+  
+  .second-line{
+    background-color: transparent;
+  }
+
+  .threed-line{
+    transform: rotate(-45deg);
+    position: absolute;
+  }
 }
+//end media max-width: 600
+
