@@ -81,11 +81,12 @@
 
 .silider-list {
   width: 19%;
-  height: 220px;
+  height: 230px;
   box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   background-color: $light-color;
   transition: box-shadow 0.4s ease;
+  position: relative;
   a {
     color: $global-color;
     display: inline-flex;
@@ -93,7 +94,8 @@
     align-items: center;
     width: 100%;
     text-align: center;
-    padding: 28px;
+    padding: 20px;
+    padding-top: 15px;
   }
 }
 
@@ -103,11 +105,115 @@
 
 .img-box {
   width: 72px;
-  height: 68px;
+  height: 65px;
   display: flex;
   align-items: center;
+  margin-bottom: 1px;
 }
 
 .silider-list1{
     width: 6%;
+}
+
+.list-heading{
+    font-size: $normal-size;
+    color: $global-color;
+    font-weight: 400;
+    width: 79px;
+}
+
+.price-box{
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span{
+        font-size: $normal-size;
+        color: $active-color;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    span::before{
+        content: "5000₽";
+        font-size: $small-size2;
+        color: #27272773;
+        position: absolute;
+        top: -25px;
+    }
+}
+
+.price-box::before{
+    content: "";
+    height: 4px;
+    width: 25px;
+    background-color: $active-color;
+    position: absolute;
+    top: -45px;
+}
+
+
+@media only screen and (max-width: 900px){
+    .silider-list:nth-child(4){
+        display: none;
+    }
+
+    .silider-list{
+        width: 24%;
+    }
+
+    .silider-list1{
+        width: 8%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .services-box{
+        p{
+            width: 90%;
+        }
+    }
+    .silider-list:nth-child(3){
+        display: none;
+    }
+
+    .silider-list{
+        width: 40%;
+    }
+
+    .silider-list1{
+        width: 8%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    .services-box{
+       h1{
+           font-size: $heading-size-m1;
+       }
+    }
+    .silider-item{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .silider-list:nth-child(2){
+        display: none;
+    }
+
+    .silider-list{
+        width: 65%;
+    }
+
+    .silider-list1{
+        width: 13%;
+    }
+
+    .slider-btn{
+        display: none;
+    }
 }
