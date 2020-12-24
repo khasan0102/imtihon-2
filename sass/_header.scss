@@ -337,3 +337,8 @@
 }
 //end media max-width: 600
 
+@media only screen and (max-width: 400px){
+  .header-nav-section{
+    width: 100%;
+  }
+}
