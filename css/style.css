@@ -796,6 +796,8 @@ a {
   top: -45px; }
 
 @media only screen and (max-width: 900px) {
+  .services-box {
+    width: 100%; }
   .silider-list:nth-child(4) {
     display: none; }
   .silider-list {
@@ -804,8 +806,10 @@ a {
     width: 8%; } }
 
 @media only screen and (max-width: 600px) {
-  .services-box p {
-    width: 90%; }
+  .services-box {
+    width: 100%; }
+    .services-box p {
+      width: 90%; }
   .silider-list:nth-child(3) {
     display: none; }
   .silider-list {
@@ -827,3 +831,179 @@ a {
     width: 13%; }
   .slider-btn {
     display: none; } }
+
+.modern {
+  margin-top: 80px; }
+
+.modern-box {
+  display: flex;
+  justify-content: space-between; }
+  .modern-box h1 {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 500;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin: 0;
+    margin-top: 25px; }
+  .modern-box h1::before {
+    content: "";
+    height: 4px;
+    width: 45px;
+    background-color: #ffd600;
+    position: absolute;
+    top: -25px; }
+
+.modern-box > img {
+  transform: translateX(-100px); }
+
+.modern-p-box {
+  margin-top: 15px; }
+  .modern-p-box p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 25px;
+    color: #000000;
+    font-weight: 300;
+    width: 538px; }
+
+.modern-item {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0; }
+
+.modern-list {
+  margin: 10px; }
+  .modern-list a {
+    display: inline-flex;
+    align-items: center;
+    color: #272727;
+    text-decoration: none;
+    transition: text-decoration 0.5s ease; }
+    .modern-list a h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #000000; }
+    .modern-list a p {
+      margin: 2px;
+      font-size: 14px;
+      width: 510px; }
+    .modern-list a img {
+      margin-right: 15px; }
+  .modern-list a:hover {
+    text-decoration: underline; }
+
+@media only screen and (max-width: 1150px) {
+  .modern-box {
+    width: 100%; }
+  .modern-box > img {
+    width: 37%;
+    transform: translateX(0);
+    height: auto; }
+  .modern-info {
+    width: 55%; }
+    .modern-info h1 {
+      width: 80%; }
+    .modern-info p {
+      width: 95%; }
+  .modern-item {
+    width: 100%; }
+  .modern-list {
+    width: 100%; }
+    .modern-list a {
+      width: 100%; }
+      .modern-list a p {
+        width: 80%; } }
+
+@media only screen and (max-width: 900px) {
+  .modern {
+    width: 100%; }
+  .modern-box {
+    width: 100%;
+    justify-content: space-around; }
+  .modern-box > img {
+    width: 35%;
+    transform: translateX(0);
+    height: auto; }
+  .modern-info {
+    width: 55%; }
+    .modern-info h1 {
+      font-size: 25px;
+      width: 70%; }
+    .modern-info p {
+      font-size: 15px; }
+  .modern-item {
+    width: 100%; }
+  .modern-list {
+    width: 100%;
+    margin: 0; }
+    .modern-list a img {
+      width: 50px;
+      height: 50px; }
+    .modern-list a h3 {
+      font-size: 16px;
+      width: 200px; }
+    .modern-list a p {
+      font-size: 13px;
+      width: 90%;
+      margin: 2px 0; } }
+
+@media only screen and (max-width: 750px) {
+  .modern-info {
+    width: 50%; }
+  .modern-box > img {
+    width: 35%;
+    transform: translateX(0);
+    height: auto; }
+  .modern-list {
+    width: 50%;
+    margin: 10px auto; }
+    .modern-list a img {
+      width: 50px;
+      height: 50px; }
+    .modern-list a h3 {
+      font-size: 16px; }
+    .modern-list a p {
+      display: none; } }
+
+@media only screen and (max-width: 600px) {
+  .modern-box {
+    flex-direction: column;
+    align-items: center; }
+  .modern-box > img {
+    width: 90%; }
+  .modern-info {
+    width: 90%; }
+    .modern-info h1 {
+      text-align: left;
+      font-size: 36px;
+      width: 100%; }
+    .modern-info p {
+      font-size: 18px; }
+    .modern-info h1::before {
+      height: 0; }
+  .modern-list {
+    width: 100%; }
+    .modern-list a img {
+      height: 100px;
+      width: 100px; }
+    .modern-list a h3 {
+      font-size: 25px;
+      width: auto; } }
+
+@media only screen and (max-width: 400px) {
+  .modern-info h1 {
+    font-size: 30px;
+    width: auto; }
+  .modern-list {
+    width: 100%; }
+    .modern-list a img {
+      height: 60px;
+      width: 60px; }
+    .modern-list a h3 {
+      font-size: 18px;
+      width: auto; } }

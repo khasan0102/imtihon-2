@@ -1,0 +1,266 @@
+.modern{
+    margin-top: 80px;
+}
+
+.modern-box {
+  display: flex;
+  justify-content: space-between;
+
+  h1{
+      font-size: $heading-size;
+      line-height: $heading-lh;
+      font-weight: 500;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      margin: 0;
+      margin-top: 25px;
+  }
+
+  h1::before{
+      content: "";
+      height: 4px;
+      width: 45px;
+      background-color: $gold-color;
+      position: absolute;
+      top: -25px;
+     
+  }
+}
+
+.modern-box > img{
+    transform: translateX(-100px);
+}
+
+.modern-p-box{
+    margin-top: 15px;
+    p{
+        margin: 0;
+        font-size: $normal-size;
+        line-height: $normal-lh3;
+        color: $dark-color;
+        font-weight: 300;
+        width: 538px;
+    }
+}
+
+.modern-item{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 0;
+}
+
+.modern-list{
+    margin: 10px;
+    a{
+        display: inline-flex;
+        align-items: center;
+        color: $global-color;
+        text-decoration: none;
+        transition: text-decoration 0.5s ease;
+
+        h3{
+            margin: 0;
+            font-size: $normal-size;
+            color: $dark-color;
+        }
+
+        p{
+            margin: 2px;
+            font-size: $small-size;
+            width: 510px;
+        }
+
+        img{
+            margin-right: 15px;
+        }
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+
+@media only screen and (max-width: 1150px){
+    .modern-box{
+        width: 100%;
+    }
+    .modern-box > img{
+        width: 37%;
+        transform: translateX(0);
+        height: auto;
+    }
+
+    .modern-info{
+        width: 55%;
+
+        h1{
+            width: 80%;
+        }
+
+        p{
+            width: 95%;
+        }
+    }
+    .modern-item{
+        width: 100%;
+    }
+    .modern-list {
+        width: 100%;
+        a{
+            width: 100%;
+            p{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .modern{
+        width: 100%;
+    }
+    .modern-box{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .modern-box > img{
+        width: 35%;
+        transform: translateX(0);
+        height: auto;
+    }
+
+    .modern-info{
+        width: 55%;
+
+        h1{
+            font-size: $heading-size-m2;
+            width: 70%
+        }
+
+        p{
+            font-size: $small-size2;
+        }
+    }
+    .modern-item{
+        width: 100%;
+    }
+    .modern-list {
+        width: 100%;
+        margin: 0;
+        a{
+            img{
+                width: 50px;
+                height: 50px;
+            }
+            h3{
+                font-size: $normal-size2;
+                width: 200px;
+            }
+            p{
+                font-size: $small-size-m1;
+                width: 90%;
+                margin: 2px 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 750px){
+    .modern-info{
+        width: 50%;
+    }
+    .modern-box > img{
+        width: 35%;
+        transform: translateX(0);
+        height: auto;
+    }
+
+    .modern-list {
+        width: 50%;
+        margin: 10px auto;
+        a{
+            img{
+                width: 50px;
+                height: 50px;
+            }
+            h3{
+                font-size: $normal-size2;
+            }
+            p{
+               display: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .modern-box{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .modern-box > img{
+        width: 90%;
+    }
+
+    .modern-info{
+        width: 90%;
+
+        h1{
+            text-align: left;
+            font-size: $heading-size;
+            width: 100%;
+        }
+        p{
+            font-size: $normal-size;
+        }
+
+        h1::before{
+            height: 0;
+        }
+    }
+    
+
+    .modern-list{
+        width: 100%;
+        a{
+            img{
+                height: 100px;
+                width: 100px;
+            }
+
+            h3{
+                font-size: $heading-size-m2;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .modern-info{
+        h1{
+            font-size: $heading-size-m1;
+            width: auto;
+        }
+    }
+    .modern-list{
+        width: 100%;
+        a{
+            img{
+                height: 60px;
+                width: 60px;
+            }
+
+            h3{
+                font-size: $normal-size;
+                width: auto;
+            }
+        }
+    } 
+}
